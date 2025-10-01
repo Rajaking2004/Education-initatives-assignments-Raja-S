@@ -91,7 +91,68 @@ src/
 ```
 
 ---
+---
 
+## Class Responsibilities
+
+### 1. `AstronautScheduleApp.java`  
+**Location:** `src/com/space/schedule/`  
+- Entry point of the application (`main` method).  
+- Handles **console user interaction**: shows menu, receives input, and calls `ScheduleManager`.  
+- Delegates all task operations to `ScheduleManager`.  
+
+### 2. `ScheduleManager.java`  
+**Location:** `src/com/space/schedule/manager/`  
+- Implements the **Singleton pattern**.  
+- Manages tasks: add, edit, remove, view, mark completed.  
+- Handles **task storage, conflict detection, and sorting** (`TreeSet`).  
+- Notifies observers (`ConflictNotifier`) on conflicts (**Observer pattern**).  
+- Uses `TaskFactory` to create **validated Task objects**.  
+- Maintains **in-memory logs**.  
+- Supports **multi-astronaut schedules**.  
+
+### 3. `Task.java`  
+**Location:** `src/com/space/schedule/model/`  
+- Represents a **single task**.  
+- Attributes: description, startTime, endTime, priority, category, location, isCompleted.  
+- Implements **Comparable** for sorting by startTime.  
+
+### 4. `PriorityLevel.java`  
+**Location:** `src/com/space/schedule/model/`  
+- Enum: `CRITICAL`, `HIGH`, `NORMAL`, `LOW`, `OPTIONAL`.  
+- Used for scheduling and conflict resolution.  
+
+### 5. `TaskFactory.java`  
+**Location:** `src/com/space/schedule/model/`  
+- Implements **Factory pattern** for creating `Task` instances.  
+- Validates input data: start/end times, priority, category.  
+- Returns fully constructed `Task` object.  
+
+### 6. `ConflictObserver.java`  
+**Location:** `src/com/space/schedule/observer/`  
+- Interface for **Observer pattern**.  
+- Defines `notifyConflict` method for handling task conflicts.  
+
+### 7. `ConflictNotifier.java`  
+**Location:** `src/com/space/schedule/observer/`  
+- Implements `ConflictObserver`.  
+- Alerts users when tasks conflict.  
+- Can notify multiple observers (GUI, logs, or other astronauts).  
+
+### 8. `Logger.java`  
+**Location:** `src/com/space/schedule/util/`  
+- Provides **in-memory logging**.  
+- Records user actions: add, edit, remove, conflicts, errors.  
+- Displays logs **on demand**.  
+
+### 9. `TimeUtils.java`  
+**Location:** `src/com/space/schedule/util/`  
+- Handles **time parsing, validation, normalization**.  
+- Converts single-digit hours (`9:15` → `09:15`).  
+- Prevents invalid times (e.g., `25:00`, `12:60`).  
+- Centralizes **time-related utilities** for other classes.  
+
+---
 ## Compilation and Running
 
 ### 1. Compile
