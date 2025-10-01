@@ -1,4 +1,4 @@
-package com.example.ecommerce;
+package com.example.payment;
 
 public class PayPalPayment implements IPaymentStrategy {
     private String email;

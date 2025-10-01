@@ -1,4 +1,4 @@
-package com.example.ecommerce;
+package com.example.payment;
 
 public class UPIPayment implements IPaymentStrategy {
     private String upiId;

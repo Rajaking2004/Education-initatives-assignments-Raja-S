@@ -11,13 +11,13 @@ public class AstronautScheduleApp {
     public static void main(String[] args) {
         new AstronautScheduleApp().start();
     }
-
     private void start() {
-        while (isRunning) {
+        int choice;
+        do {
             showMenu();
-            int choice = getUserChoice();
+            choice = getUserChoice();
             handleChoice(choice);
-        }
+        } while (isRunning);
         System.out.println("Exiting... Goodbye, astronaut!");
     }
 

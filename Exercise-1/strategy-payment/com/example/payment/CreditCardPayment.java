@@ -1,4 +1,4 @@
-package com.example.ecommerce;
+package com.example.payment;
 
 public class CreditCardPayment implements IPaymentStrategy {
     private String cardNumber;
