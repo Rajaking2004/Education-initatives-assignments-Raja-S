@@ -12,6 +12,7 @@ In the system:
 
 ## 2. Folder Structure
 ```
+Behavioral-pattern/
 observer-product/
 ├── com/example/ecommerce/
 │   ├── Observer.java
@@ -31,7 +32,7 @@ observer-product/
 
 ### Step 1 – Navigate
 ```
-cd observer-product
+cd Behavioral-pattern/observer-product
 ```
 Step 2 – Compile
 

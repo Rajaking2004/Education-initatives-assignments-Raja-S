@@ -12,6 +12,7 @@ In the system:
 
 ## 2. Folder Structure
 ```
+Behavioral-pattern/
 strategy-payment/
 ├── com/example/ecommerce/
 │   ├── IPaymentStrategy.java
@@ -32,7 +33,7 @@ strategy-payment/
 
 ### Step 1 – Navigate
 ```
-cd strategy-payment
+cd Behavioral-pattern/strategy-payment
 ```
 Step 2 – Compile
 ```

@@ -14,26 +14,26 @@ public class WeatherApp {
         InMemoryLogger.info("Weather App started.");
 
         IWeatherService oldService = new OpenWeatherService();
-        IWeatherService newService = new NewWeatherAdapter(new NewWeatherApi());
+        NewWeatherApi api = new NewWeatherApi(); // keep reference to show cities
+        IWeatherService newService = new NewWeatherAdapter(api);
 
-        boolean exitRequested = false; // initialize to false
+        boolean exitRequested = false; 
         do {
             try {
-                exitRequested = showMenu(scanner, oldService, newService);
+                exitRequested = showMenu(scanner, oldService, newService, api);
             } 
             catch (InputMismatchException ime) {
                 InMemoryLogger.error("Invalid input type. Please try again.");
                 scanner.nextLine(); // clear buffer
-             } 
-             catch (Exception e) {
+            } 
+            catch (Exception e) {
                 InMemoryLogger.error("Unexpected error: " + e.getMessage());
-             }
-            } while (!exitRequested);
-
+            }
+        } while (!exitRequested);
 
         InMemoryLogger.info("Weather App terminated.");
 
-        // Example: Print all logs at the end
+        // Print all logs at the end
         System.out.println("\n=== In-Memory Log History ===");
         for (String log : InMemoryLogger.getLogs()) {
             System.out.println(log);
@@ -42,7 +42,7 @@ public class WeatherApp {
         scanner.close();
     }
 
-    private boolean showMenu(Scanner scanner, IWeatherService oldService, IWeatherService newService) {
+    private boolean showMenu(Scanner scanner, IWeatherService oldService, IWeatherService newService, NewWeatherApi api) {
         System.out.println("\n=== Weather App Menu ===");
         System.out.println("1) Get temperature from OpenWeatherService");
         System.out.println("2) Get temperature from NewWeatherApi (Adapter)");
@@ -53,10 +53,11 @@ public class WeatherApp {
 
         switch (choice) {
             case "1":
-                getTemperature(scanner, oldService);
+                getTemperature(scanner, oldService, null);
                 return false;
             case "2":
-                getTemperature(scanner, newService);
+                System.out.println("Supported cities in NewWeatherApi: " + api.getSupportedCities());
+                getTemperature(scanner, newService, api);
                 return false;
             case "3":
                 InMemoryLogger.info("Exit requested by user.");
@@ -67,12 +68,13 @@ public class WeatherApp {
         }
     }
 
-    private void getTemperature(Scanner scanner, IWeatherService service) {
+    private void getTemperature(Scanner scanner, IWeatherService service, NewWeatherApi api) {
         System.out.print("Enter city name: ");
         String city = scanner.nextLine().trim();
 
         if (city.isEmpty()) {
             InMemoryLogger.warn("City name cannot be empty.");
+            System.out.println(" Please enter a valid city.");
             return;
         }
 
@@ -82,6 +84,7 @@ public class WeatherApp {
             InMemoryLogger.info("Temperature fetched for city: " + city);
         } catch (Exception e) {
             InMemoryLogger.error("Failed to fetch temperature: " + e.getMessage());
+            System.out.println(" Could not fetch temperature for " + city);
         }
     }
 }

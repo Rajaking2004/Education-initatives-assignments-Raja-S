@@ -19,6 +19,7 @@ Implementation: The Format interface hierarchy (PDFFormat, EPUBFormat, MOBIForma
 Folder Structure
 The project is structured without a src folder for simplicity:
 ```
+Structural-pattern/
 bridge-ebook/
 ├── com/example/ebook/
 │   ├── ReaderApp.java (main file)
@@ -35,6 +36,10 @@ bridge-ebook/
 ```
 How to Compile & Run
 Follow these simple steps from the project's root directory (bridge-ebook/).
+```
+cd Structural-pattern/bridge-ebook
+```
+
 
 Step 1: Navigate to the Project Root
 Open your terminal or command prompt and navigate into the bridge-ebook directory.

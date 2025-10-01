@@ -12,6 +12,7 @@ In the system:
 
 ## 2. Folder Structure
 ```
+Structural-pattern/
 adapter-weather/
 ├── com/example/weather/
 │   ├── IWeatherService.java
@@ -31,7 +32,7 @@ adapter-weather/
 
 ### Step 1 – Navigate
 ```
-cd adapter-weather
+cd Structural-pattern/adapter-weather
 ```
 Step 2 – Compile
 ```
@@ -48,36 +49,65 @@ java com.example.weather.WeatherApp
 1) Get temperature from OpenWeatherService
 2) Get temperature from NewWeatherApi (Adapter)
 3) Exit
-Enter choice: 1
-Enter city name: madurai
-Fetching temperature from OpenWeatherService for madurai
-Temperature in madurai: 25.00°C
-[INFO] 2025-10-01 19:53:18 - Temperature fetched for city: madurai   
-
-=== Weather App Menu ===
-1) Get temperature from OpenWeatherService
-2) Get temperature from NewWeatherApi (Adapter)
-3) Exit
 Enter choice: 2
-Enter city name: madurai
-Fetching temperature from NewWeatherApi for madurai
-Temperature in madurai: 25.00°C
-[INFO] 2025-10-01 19:53:25 - Temperature fetched for city: madurai   
+Supported cities in NewWeatherApi: [New York, Chennai, Tokyo, London, Dubai, Paris]
+Enter city name: Chennai
+Fetching temperature from NewWeatherApi for Chennai
+Temperature in Chennai: 30.00°C
+[INFO] 2025-10-02 01:06:15 - Temperature fetched for city: Chennai
 
 === Weather App Menu ===
 1) Get temperature from OpenWeatherService
 2) Get temperature from NewWeatherApi (Adapter)
 3) Exit
 Enter choice: 3
-[INFO] 2025-10-01 19:53:27 - Exit requested by user.
-[INFO] 2025-10-01 19:53:27 - Weather App terminated.
+[INFO] 2025-10-02 01:06:22 - Exit requested by user.
+[INFO] 2025-10-02 01:06:22 - Weather App terminated.
 
 === In-Memory Log History ===
-[INFO] 2025-10-01 19:53:08 - Weather App started.
-[INFO] 2025-10-01 19:53:18 - Temperature fetched for city: madurai   
-[INFO] 2025-10-01 19:53:25 - Temperature fetched for city: madurai   
-[INFO] 2025-10-01 19:53:27 - Exit requested by user.
-[INFO] 2025-10-01 19:53:27 - Weather App terminated.
+[INFO] 2025-10-02 01:05:50 - Weather App started.
+[INFO] 2025-10-02 01:06:02 - Temperature fetched for city: chennai
+[INFO] 2025-10-02 01:06:15 - Temperature fetched for city: Chennai
+[INFO] 2025-10-02 01:06:22 - Exit requested by user.
+[INFO] 2025-10-02 01:06:22 - Weather App terminated.
+PS C:\Education Initatives\Exercise-1\adapter-weather> java com.example.weather.WeatherApp
+[INFO] 2025-10-02 01:07:09 - Weather App started.
+
+=== Weather App Menu ===
+1) Get temperature from OpenWeatherService
+2) Get temperature from NewWeatherApi (Adapter)
+3) Exit
+Enter choice: 1
+Enter city name: madurai
+Fetching temperature from OpenWeatherService for madurai
+Temperature in madurai: 25.00°C
+[INFO] 2025-10-02 01:07:16 - Temperature fetched for city: madurai
+
+=== Weather App Menu ===
+1) Get temperature from OpenWeatherService
+2) Get temperature from NewWeatherApi (Adapter)
+3) Exit
+Enter choice: 2
+Supported cities in NewWeatherApi: [New York, Chennai, Tokyo, London, Dubai, Paris]
+Enter city name: Chennai
+Fetching temperature from NewWeatherApi for Chennai
+Temperature in Chennai: 30.00°C
+[INFO] 2025-10-02 01:07:23 - Temperature fetched for city: Chennai
+
+=== Weather App Menu ===
+1) Get temperature from OpenWeatherService
+2) Get temperature from NewWeatherApi (Adapter)
+3) Exit
+Enter choice: 3
+[INFO] 2025-10-02 01:07:26 - Exit requested by user.
+[INFO] 2025-10-02 01:07:26 - Weather App terminated.
+
+=== In-Memory Log History ===
+[INFO] 2025-10-02 01:07:09 - Weather App started.
+[INFO] 2025-10-02 01:07:16 - Temperature fetched for city: madurai
+[INFO] 2025-10-02 01:07:23 - Temperature fetched for city: Chennai
+[INFO] 2025-10-02 01:07:26 - Exit requested by user.
+[INFO] 2025-10-02 01:07:26 - Weather App terminated.
 ```
 5. How Adapter Pattern is Applied
 The Adapter Pattern is applied as follows:

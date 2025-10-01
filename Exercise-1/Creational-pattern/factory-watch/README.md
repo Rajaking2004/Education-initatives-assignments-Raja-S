@@ -13,6 +13,7 @@ This follows the **Factory Pattern**, where object creation logic is encapsulate
 
 ## 2. Folder Structure
 ```
+Creational-pattern/
 factory-watch/
 ├── com/example/watch/
 │   ├── Watch.java
@@ -32,7 +33,7 @@ factory-watch/
 
 ### Step 1 – Navigate
 ```
-cd factory-watch
+cd Creational-pattern/factory-watch
 ```
 Step 2 – Compile
 ```

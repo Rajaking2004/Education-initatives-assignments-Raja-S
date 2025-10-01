@@ -18,6 +18,7 @@ Controlled loops for user input
 
 Project Structure
 ```
+Creational-pattern/
 pc-builder-demo/
  └─ com/example/pc/
      ├─ Builder.java          // Builder interface
@@ -130,7 +131,7 @@ Builder allows adding optional components without overloading constructors or cr
 Running the Program
 #navigate to pc-builder-demo
 ```
-cd pc-builder-demo
+cd Creational-pattern/pc-builder-demo
 ```
 Compile all Java files:
 ```
