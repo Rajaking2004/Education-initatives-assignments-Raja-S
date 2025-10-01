@@ -8,8 +8,8 @@ This project demonstrates **six different use cases** to understand various **so
 
 | Pattern | Use Case | Location |
 |---------|----------|---------|
-| **Strategy Pattern** | E-commerce checkout system supporting multiple payment methods (CreditCard, PayPal, UPI) | `Exercise-1/strategy-payment/` |
-| **Observer Pattern** | E-commerce product notifications when items are restocked | `Exercise-1/observer-product/` |
+| **Strategy Pattern** | E-commerce checkout system supporting multiple payment methods (CreditCard, PayPal, UPI) | `Exercise-1/Behavioral-pattern/strategy-payment/` |
+| **Observer Pattern** | E-commerce product notifications when items are restocked | `Exercise-1/Behavioral-pattern/observer-product/` |
 
 ---
 
@@ -17,8 +17,8 @@ This project demonstrates **six different use cases** to understand various **so
 
 | Pattern | Use Case | Location |
 |---------|----------|---------|
-| **Builder Pattern** | Personal Computer (PC) builder with optional components | `Exercise-1/pc-builder-demo/` |
-| **Factory Pattern** | Watch factory creating different types of watches (Digital, Analog, Smart) | `Exercise-1/factory-watch/` |
+| **Builder Pattern** | Personal Computer (PC) builder with optional components | `Exercise-1/Creational-pattern/pc-builder-demo/` |
+| **Factory Pattern** | Watch factory creating different types of watches (Digital, Analog, Smart) | `Exercise-1/Creational-pattern/factory-watch/` |
 
 ---
 
@@ -26,8 +26,8 @@ This project demonstrates **six different use cases** to understand various **so
 
 | Pattern | Use Case | Location |
 |---------|----------|---------|
-| **Bridge Pattern** | E-Book reader supporting multiple book types and formats | `Exercise-1/bridge-ebook/` |
-| **Adapter Pattern** | Weather service integrating a new third-party API with different method signatures | `Exercise-1/adapter-weather/` *(example location)* |
+| **Bridge Pattern** | E-Book reader supporting multiple book types and formats | `Exercise-1/Structural-pattern/bridge-ebook/` |
+| **Adapter Pattern** | Weather service integrating a new third-party API with different method signatures | `Exercise-1/Structural-pattern/adapter-weather/` *(example location)* |
 
 ---
 
