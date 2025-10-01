@@ -333,6 +333,9 @@ Exiting... Goodbye, astronaut!
 * **Non-existent task removal** → `ERROR: Task not found.`
 
 ---
+## UML Diagram
+<img width="1105" height="927" alt="image" src="https://github.com/user-attachments/assets/a37372d5-aa70-4782-8824-c0787d737a28" />
+---
 
 ## Dependencies
 
