@@ -104,7 +104,8 @@ Problem Statement
  6. Documentation: Code is well-documented, and usage instructions are clear.
  The goal of this exercise is to assess the candidate's coding skills, understanding of design
  patterns, and ability to produce high-quality, maintainable code.
- File location and inside Exercise-2 folder it has own README.md file in it that explains the working
+ 
+ ##File location and inside Exercise-2 folder it has own README.md file in it that explains the working
  ```
  Exercise-2
 └── src/
